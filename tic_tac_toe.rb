@@ -47,7 +47,7 @@ class TicTacToe
 		end
 		header += "---`"
 		puts header
-		(0..@board_state.length-1).each do |line_number|
+		(0..@n-1).each do |line_number|
 			print "|"
 			@board_state[line_number].each do |mark|
 				print " #{mark} |"
@@ -125,7 +125,7 @@ class TicTacToe
 			puts 'not a valid number'
 			raise
 		end
-		unless( (x>=0)&&(x<=@board_state[0].length-1) && (y>=0)&&(y<=@board_state.length-1) )
+		unless( (x>=0)&&(x<=@n-1) && (y>=0)&&(y<=@n-1) )
 			puts 'position not in range'
 			raise
 		end
